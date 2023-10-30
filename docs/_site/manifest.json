@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/Projects/Nothing/Documentation",
+  "source_base_path": "D:/Projects/New folder/MehrbanooEbrahimzade.github.io/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "SA7ut2pHo+ZbbsXc1HhQ6VDGPksFs8uUe0mC2HRG2/8="
+          "hash": "oQSthz0HEvaXONASSZHnyuLa+olWUirYeL0q9MReak0="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/test.MyClass.html",
-          "hash": "NMYepw2pEuEUgzn0J12ln4fv2QCYQLmsD5GdXsoUJjM="
+          "hash": "A1eQa7dUxsJRjK+yigIadlq7TgSiKp2M4cQ8Z0jg0Os="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/test.Pages.ErrorModel.html",
-          "hash": "IG7WoeohQxDW6/AIzd8ZOwdCg7lqEi2VzmEXi3Ht0Yk="
+          "hash": "hraHWoje1Q5rpylDVe7IAZgyS9RuI36Rxk6xTwzlwA8="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/test.Pages.IndexModel.html",
-          "hash": "JxHIkXuHyqHCvf6ikn9JaT7e/S42046x1hWJy5mVE5E="
+          "hash": "LfRrjHLbFAS0LFXs+9FjStXf+JgEA3kzRuu+XJBjSOY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/test.Pages.PrivacyModel.html",
-          "hash": "/HVIViiyYDVehh7UAXEGRKQpKUWnhzFi9cd9noDtCDg="
+          "hash": "wHHSPkcNnH7NDiCvi7ZwdVgBzVF5zLYLTMOr/wcCJhs="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -72,7 +72,7 @@
           "hash": "ArDSSO+wnNYBEFOeWLf9JOotRhxWfXxyYDmZiwpPbLY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -84,7 +84,7 @@
           "hash": "5Z5GU7vZj3wCoe9kVUZGFbgUBFym7ppmun1G1C24WQU="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "crVyBuvTB+5KBM5fZEw9O/k77HYkJpZf9cpPD1HR0EU="
+          "hash": "C+5BFIV3ReKqt8w0S/z7VeIDTAJijGizdRDQROUlcFI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "nQS0zJCKq4ItB+DGz+gzSWi6yt4k2K4FJeCqHuidKXQ="
+          "hash": "UVBsjG37HsBb9uYgVrWWpmHQZc7l8b3LHknSu/sgdOQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -151,23 +151,25 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 3
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 6,
-          "skipped_file_count": 6
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -180,8 +182,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0
