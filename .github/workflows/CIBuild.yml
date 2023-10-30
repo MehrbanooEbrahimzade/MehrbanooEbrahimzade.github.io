@@ -1,62 +1,27 @@
-name: CI Build
+name: Build and Test
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:
-permissions:
-  contents: read  
-  pull-requests: write
-
-env:
-  DOTNET_NOLOGO: true                     # Disable the .NET logo in the console output
-  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true # Disable the .NET first time experience to skip caching NuGet packages and speed up the build
-  DOTNET_CLI_TELEMETRY_OPTOUT: true       # Disable sending .NET CLI telemetry to Microsoft
+    branches:
+      - main  # Set to the branch you want to trigger the workflow on
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    name: CI Build
+    runs-on: ubuntu-latest  # Use an appropriate runner for your project
+
     steps:
-    - name: Checkout
+    - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 6.x  # Use the desired .NET version
 
-    - name: Build
+    - name: Restore and Build
       run: |
-        msbuild /restore /t:Build test.sln /p:Configuration=Release
-      
-    - name: Coverage Summary Report
-      uses:  irongut/CodeCoverageSummary@v1.2.0
-      with:
-        filename: coverage.cobertura.xml
-        badge: true
-        format: 'md'
-        output: 'both'
+        dotnet restore
+        dotnet build --configuration Release
 
-    - name: Add Coverage PR Comment
-      uses: marocchino/sticky-pull-request-comment@v2
-      if: github.event_name == 'pull_request'
-      with:
-        recreate: true
-        path: code-coverage-results.md
-
-    - name: Upload Coverage Artifact
-      uses: actions/upload-artifact@v2.3.0
-      with:
-        name: test-coverage-report
-        path: |
-          coverage.cobertura.xml
-          code-coverage-results.md
-
-    - name: Upload Nuget Artifact
-      uses: actions/upload-artifact@v2.3.0
-      with:
-        name: NuGet Packages
-        path: artifacts/NuGet/Release
+    - name: Test
+      run: dotnet test
