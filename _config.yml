@@ -2,3 +2,6 @@ name: My Site
 theme: jekyll-theme-minimal
 title: Octocat's homepage
 description: Bookmark this to keep an eye on my project updates!
+- name: GitHub Pages action
+uses: peaceiris/actions-gh-pages@v3.9.3
+            
